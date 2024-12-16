@@ -16,3 +16,7 @@ aside{
     flex: 1;
     overflow-y: auto;
 }
+header{
+    display: flex;
+    justify-content: space-between;
+}
