@@ -1,22 +1,162 @@
+/* Base styles */
 body {
   display: flex;
   flex-direction: column;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
 main {
   display: flex;
   flex-direction: row;
-  flex:auto;
+  flex: auto;
 }
-article{
-    flex: 2;
- overflow-y: auto;
+
+article {
+  flex: 2;
+  overflow-y: auto;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
-aside{
+
+aside {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  background-color: #f3f3f3;
+  border-left: 2px solid #ccc;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #6200ea;
+  padding-block: 2rem ;
+  color: white;
+
+}
+
+header .logo {
+  font-size: 2rem;
+  color: gold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  background-color: #6200ea;
+  color: white;
+  padding: 1rem;
+}
+
+footer a {
+  color: gold;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Article-specific styles */
+article h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+article h2 {
+  font-size: 1.5rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+article h3 {
+  font-size: 1.25rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+article p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+article a {
+  color: #6200ea;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+article a:hover {
+  text-decoration: underline;
+}
+
+article table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+article table th,
+article table td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+article table th {
+  background-color: #6200ea;
+  color: white;
+}
+
+article table tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  article {
     flex: 1;
-    overflow-y: auto;
-}
-header{
-    display: flex;
-    justify-content: space-between;
+  }
+
+  aside {
+    flex: 1;
+  }
 }
