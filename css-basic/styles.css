@@ -1,7 +1,8 @@
-/* Base styles */
+
 body {
   display: flex;
   flex-direction: column;
+  width: 100%;
   font-family: Arial, sans-serif;
   line-height: 1.6;
   margin: 0;
@@ -10,6 +11,7 @@ body {
 
 main {
   display: flex;
+  min-height: 80vh;
   flex-direction: row;
   flex: auto;
 }
@@ -36,7 +38,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #6200ea;
+  background-color: #ff0303;
   padding-block: 2rem ;
   color: white;
 
@@ -66,7 +68,7 @@ nav a:hover {
 
 footer {
   text-align: center;
-  background-color: #6200ea;
+  background-color:  #ff0303;
   color: white;
   padding: 1rem;
 }
@@ -80,7 +82,7 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Article-specific styles */
+
 article h1 {
   font-size: 2rem;
   color: #333;
@@ -105,7 +107,7 @@ article p {
 }
 
 article a {
-  color: #6200ea;
+  color:  #ff0303;
   font-weight: bold;
   text-decoration: none;
 }
@@ -136,27 +138,8 @@ article table tbody tr:nth-child(odd) {
   background-color: #f9f9f9;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  main {
-    flex-direction: column;
-  }
-
-  article {
-    flex: 1;
-  }
-
-  aside {
-    flex: 1;
-  }
+aside h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
 }
